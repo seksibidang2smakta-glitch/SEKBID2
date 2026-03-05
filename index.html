@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EEB Sekbid 2 OSIS</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+overflow-x:hidden;
+}
+
+/* PARTICLE */
+#particle-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.particle{
+position:absolute;
+background:white;
+border-radius:50%;
+opacity:0.7;
+animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+from{transform:translateY(0);opacity:0;}
+50%{opacity:0.8;}
+to{transform:translateY(-100vh);opacity:0;}
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+align-items:center;
+padding:20px;
+}
+
+.logo{
+width:70px;
+height:70px;
+border-radius:50%;
+background:#ffffff30;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-right:15px;
+overflow:hidden;
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.title{
+font-size:22px;
+font-weight:bold;
+}
+
+/* JAM */
+
+.clock{
+position:absolute;
+top:20px;
+right:30px;
+font-size:18px;
+text-align:right;
+}
+
+/* KONTEN */
+
+.container{
+padding:40px;
+}
+
+.card{
+background:#ffffff15;
+padding:25px;
+border-radius:12px;
+margin-bottom:20px;
+backdrop-filter:blur(5px);
+}
+
+.section-title{
+font-size:20px;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+.footer{
+text-align:center;
+margin-top:40px;
+font-size:14px;
+opacity:0.8;
+}
+
+/* LINK */
+
+.link{
+display:block;
+width:250px;
+margin:15px auto;
+padding:14px;
+border-radius:10px;
+background:#ffffff20;
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:0.3s;
+}
+
+.link:hover{
+background:#00c6ff;
+box-shadow:0 0 15px #00c6ff;
+transform:scale(1.05);
+}
+
+/* BUTTON */
+
+.btn{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:#00c6ff;
+color:white;
+cursor:pointer;
+font-size:16px;
+}
+
+.btn:hover{
+box-shadow:0 0 15px #00c6ff;
+}
+
+.back{
+margin-top:40px;
+display:inline-block;
+padding:10px 20px;
+background:#00c6ff;
+border-radius:8px;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="particle-container"></div>
+
+<div class="header">
+
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<div class="title">
+SEKBID 2 OSIS SMK NEGERI 1 TANGGEUNG
+</div>
+
+</div>
+
+<div class="clock">
+<div id="clock">00:00:00</div>
+<div id="date"></div>
+</div>
+
+<!-- HALAMAN UTAMA -->
+
+<div class="container" id="halaman-utama">
+
+<div class="card">
+<div class="section-title">Tema Sekbid</div>
+<p>
+Integrasi Nilai Kepribadian dan Kewarganegaraan Dalam Masyarakat Pluralisme.
+</p>
+</div>
+
+<div class="card">
+<div class="section-title">Struktur Sekbid</div>
+<p><b>Ketua Sekbid :</b> Hanafi</p>
+<p><b>Anggota :</b> Melisa</p>
+</div>
+
+<div class="card">
+<div class="section-title">Informasi Sekbid</div>
+<p>
+Sekbid 2 OSIS SMK Negeri 1 Tanggeung bergerak dalam bidang 
+kepribadian dan kewarganegaraan. Sekbid ini bertujuan untuk 
+menanamkan sikap disiplin, tanggung jawab, toleransi, dan 
+kepedulian sosial kepada seluruh siswa.
+
+Melalui program dan kegiatan yang dilaksanakan, Sekbid 2 
+berusaha membentuk karakter siswa yang berakhlak baik, 
+memiliki rasa kebersamaan, serta mampu hidup berdampingan 
+dalam lingkungan yang beragam.
+</p>
+</div>
+
+<div class="card" style="text-align:center">
+
+<div class="section-title">Menu Sekbid</div>
+
+<button class="btn" onclick="tampilMediaSosial()">
+Media Sosial
+</button>
+
+<br><br>
+
+<button class="btn" onclick="tampilNews()">
+News Sekbid
+</button>
+
+</div>
+
+<div class="footer">
+©SEKSI BIDANG 2 OSIS SMK NEGERI 1 TANGGEUNG
+</div>
+
+</div>
+
+<!-- HALAMAN MEDIA SOSIAL -->
+
+<div class="container" id="halaman-media" style="display:none;text-align:center">
+
+<h1>Media Sosial Sekbid 2</h1>
+
+<a class="link" href="https://www.instagram.com/sekbid2_smakta?igsh=a216Y2FoZ3VwOGQz" target="_blank">
+Instagram
+</a>
+
+<a class="link" href="#">
+TikTok (Coming Soon)
+</a>
+
+<a class="link" href="#">
+YouTube (Coming Soon)
+</a>
+
+<a class="link" href="https://whatsapp.com/channel/0029Vb7f3jnCnA7p85vomu1g" target="_blank">
+Saluran WhatsApp
+</a>
+
+<a class="link" href="mailto:seksibidang2smakta@gmail.com">
+Customer Service
+</a>
+
+<button class="back" onclick="kembaliKeUtama()">
+Kembali
+</button>
+
+</div>
+
+<!-- HALAMAN NEWS -->
+
+<div class="container" id="halaman-news" style="display:none">
+
+<h1>News Sekbid 2</h1>
+
+<div class="card">
+<div class="section-title">Berbagi Takjil Ramadan</div>
+<p>
+OSIS SMK Negeri 1 Tanggeung melaksanakan kegiatan berbagi 
+takjil kepada masyarakat sebagai bentuk kepedulian sosial yang akan di laksanakan pada hari Selasa,10 Maret 2026.
+di bulan Ramadan.
+</p>
+</div>
+
+<div class="card">
+<div class="section-title">Program Pembinaan Karakter</div>
+<p>
+Sekbid 2 mengadakan kegiatan yang bertujuan untuk meningkatkan 
+sikap disiplin, tanggung jawab, serta kebersamaan antar siswa.
+</p>
+</div>
+
+<button class="back" onclick="kembaliKeUtama()">
+Kembali
+</button>
+
+</div>
+
+<script>
+
+/* JAM */
+
+function updateClock(){
+
+let now=new Date();
+
+let h=now.getHours().toString().padStart(2,'0');
+let m=now.getMinutes().toString().padStart(2,'0');
+let s=now.getSeconds().toString().padStart(2,'0');
+
+document.getElementById("clock").innerText=h+":"+m+":"+s;
+
+let date=now.toLocaleDateString("id-ID",{
+weekday:"long",
+day:"numeric",
+month:"long",
+year:"numeric"
+});
+
+document.getElementById("date").innerText=date;
+
+}
+
+setInterval(updateClock,1000);
+updateClock();
+
+/* HALAMAN */
+
+function tampilMediaSosial(){
+
+document.getElementById("halaman-utama").style.display="none";
+document.getElementById("halaman-news").style.display="none";
+document.getElementById("halaman-media").style.display="block";
+
+}
+
+function tampilNews(){
+
+document.getElementById("halaman-utama").style.display="none";
+document.getElementById("halaman-media").style.display="none";
+document.getElementById("halaman-news").style.display="block";
+
+}
+
+function kembaliKeUtama(){
+
+document.getElementById("halaman-utama").style.display="block";
+document.getElementById("halaman-media").style.display="none";
+document.getElementById("halaman-news").style.display="none";
+
+}
+
+/* PARTICLE */
+
+const particleContainer=document.getElementById("particle-container");
+
+for(let i=0;i<40;i++){
+
+const particle=document.createElement("div");
+particle.classList.add("particle");
+
+const size=Math.random()*4+1;
+
+particle.style.width=size+"px";
+particle.style.height=size+"px";
+
+particle.style.left=Math.random()*100+"vw";
+particle.style.bottom="-10px";
+
+particle.style.animationDuration=(Math.random()*20+10)+"s";
+particle.style.animationDelay=Math.random()*10+"s";
+
+particleContainer.appendChild(particle);
+
+}
+
+</script>
+
+</body>
+</html>
